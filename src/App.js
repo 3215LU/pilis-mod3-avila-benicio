@@ -8,11 +8,13 @@ import CardCreation from './routes/Card/CardCreation';
 function App() {
   return (
     <div className="App">
-          <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path='login' element={<Login/>}/>
-              <Route path='card/create' element={<CardCreation/>}/>
-          </Routes>
+      <Routes>
+        <Route path='/' element={<Navigation/>}>
+          <Route index element={<Home/>}/>
+          <Route path='login' element={<Login/>}/>
+          <Route path='card/create' element={<CardCreation/>}/>
+          </Route>
+      </Routes>
     </div>
   );
 }
