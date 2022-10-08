@@ -3,8 +3,6 @@ import { useContext, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 
-
-
 const Navigation = () => {  
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
@@ -22,10 +20,10 @@ const Navigation = () => {
 
   return (
     <>
-      <div className='navigation'>
+      <div className='navigation bg-secondary'>
         <div className='nav-links-container'>
           { currentUser ? (
-            <Link className='nav-link' to='/card/create'>
+            <Link className='nav-link ' to='/card/create'>
               Nueva Tarjeta
             </Link>
             ):(
@@ -44,7 +42,6 @@ const Navigation = () => {
           )}
         </div>
       </div>
-        
       <Outlet />
     </>
   );};

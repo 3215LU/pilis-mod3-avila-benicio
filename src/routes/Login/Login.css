@@ -1,0 +1,12 @@
+/*.sign-in-form{
+    */
+.sign-in-container{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'calabri';
+    color: white;
+}

@@ -18,7 +18,9 @@ const Login = () => {
 
   return (
     <div className='sign-in-container'>
-      <span>Ingresa con tu usuario y contraseña</span>
+      <span className='titulologinSpan'><b>Ingresa con tu usuario y contraseña</b></span>
+      <br/>
+      <br/>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>
         <input
           className='input-form'
@@ -30,6 +32,8 @@ const Login = () => {
           )
         }
          />
+         <br/>
+         <br/>
         {/* <p>{errors.username?.message}</p> */}
         <input
           className='input-form'
@@ -44,7 +48,9 @@ const Login = () => {
           }
         />
         {/* <p>{errors.password?.message}</p> */}
-         <button className='btn-form' type='submit'>Iniciar Sesión</button>
+        <br/>
+        <br/>
+         <button className='btn btn-form btn-dark' type='submit'>Iniciar Sesión</button>
       </form>
     </div>
   )
