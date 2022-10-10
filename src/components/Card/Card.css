@@ -1,0 +1,10 @@
+.card {
+    /* background-color: red; */
+    /* color: red; */
+    width: 150px;
+    border-radius: 30px;
+    border: solid;
+    /* height: 150px; */
+    /* display: flex;
+    flex-direction: row; */
+}
