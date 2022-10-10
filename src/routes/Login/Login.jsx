@@ -18,6 +18,8 @@ const Login = () => {
 
   return (
     <div className='sign-in-container'>
+      <div className='loginFo'>
+      <h3>Login</h3>
       <span>Ingresa con tu usuario y contraseña</span>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -30,6 +32,8 @@ const Login = () => {
           )
         }
          />
+         <br/>
+         <br/>
         {/* <p>{errors.username?.message}</p> */}
         <input
           className='input-form'
@@ -44,8 +48,11 @@ const Login = () => {
           }
         />
         {/* <p>{errors.password?.message}</p> */}
-         <button className='btn-form' type='submit'>Iniciar Sesión</button>
+        <br/>
+        <br/>
+         <button className='btn-form btm btn-secondary' type='submit'>Iniciar Sesión</button>
       </form>
+      </div>
     </div>
   )
 }

@@ -22,8 +22,8 @@ const Navigation = () => {
 
   return (
     <>
-      <div className='navigation'>
-        <div className='nav-links-container'>
+      <div className=' bg-dark navigation'>
+        <div className=' nav-links-container'>
           { currentUser ? (
             <Link className='nav-link' to='/card/create'>
               Nueva Tarjeta
