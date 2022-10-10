@@ -132,8 +132,8 @@ return (
     <div className="card">
             <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">            
-            <h5 className="card-title">Este es el Home</h5>            
-            <p className="card-text"><b>Lugar: </b> {data.lugar}</p>
+            <h5><b>{data.lugar}</b></h5>            
+            <h5>SAN SALVADOR DE JUJUY</h5>            
             <p className="card-text"><b>Latitud: </b>{data.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{data.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{data.temperatura} º C.</p>
@@ -143,8 +143,7 @@ return (
         <div className="card">
             <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">            
-            <h5 className="card-title">Este es el Home</h5>            
-            <p className="card-text"><b>Lugar: </b> {dato1.lugar}</p>
+            <h5>RINCONADA</h5>            
             <p className="card-text"><b>Latitud: </b>{dato1.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{dato1.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato1.temperatura} º C.</p>
@@ -153,10 +152,9 @@ return (
         </div>
         <div className="card">
             <img src="..." className="card-img-top" alt="..."/>
-            <div className="card-body">
-                
-            <h5 className="card-title">Este es el Home</h5>            
-            <p className="card-text"><b>Lugar: </b> {dato2.lugar}</p>
+            <div className="card-body">                            
+            <h5><b> {dato2.lugar}</b></h5>
+            <h5>SUSQUES</h5>
             <p className="card-text"><b>Latitud: </b>{dato2.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{dato2.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato2.temperatura} º C.</p>
@@ -166,8 +164,8 @@ return (
         <div className="card">
             <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">                
-            <h5 className="card-title">Este es el Home</h5>            
-            <p className="card-text"><b>Lugar: </b> {dato3.lugar}</p>
+            <h5><b> {dato3.lugar}</b></h5>
+            <h5>PERICO</h5>
             <p className="card-text"><b>Latitud: </b>{dato3.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{dato3.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato3.temperatura} º C.</p>

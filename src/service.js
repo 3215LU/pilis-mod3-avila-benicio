@@ -27,7 +27,7 @@ export default getClima;
 export const getClim = async () => {
   try {
     const dato1 = await fetch(`
-    https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=24.2363269&longitude=64.889704&timezone=America/Argentina/Jujuy    
+    https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=22.3464624&longitude=66.0210981&timezone=America/Argentina/Jujuy    
     `);
     return dato1.json();
   } catch {
