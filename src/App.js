@@ -7,6 +7,11 @@ import Navigation from './routes/Navigation/Navigation'
 import Home from './routes/Home/Home'
 import Login from './routes/Login/Login';
 import CardCreation from './routes/Card/CardCreation';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { UserProvider } from './context/UserContext';
+import * as myReactDOM from "react-dom/client";
+
 
 function App() {
   const { setCards } = useContext(CardsContext)
