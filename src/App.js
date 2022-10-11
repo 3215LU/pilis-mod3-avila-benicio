@@ -11,8 +11,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import * as myReactDOM from "react-dom/client";
+import Footer from "./routes/Footer/Footer"
 
-
+import Jujuy from './routes/Jujuy/Jujuy';
 function App() {
   const { setCards } = useContext(CardsContext)
 
@@ -24,17 +25,22 @@ function App() {
   //   })
   //   .catch((err) => console.log(err));
   // }, [])
-
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Navigation/>}>
           <Route index element={<Home/>}/>
-          <Route path='login' element={<Login/>}/>
+          <Route path='login' element={<Login/>}/>          
           <Route path='card/create' element={<CardCreation/>}/>
+          <Route path='jujuy' element={<Jujuy/>}/>
           </Route>
       </Routes>
+      
     </div>
+    
+    
+    
+
   );
 }
 

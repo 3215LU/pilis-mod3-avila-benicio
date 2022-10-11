@@ -44,6 +44,7 @@ const CardCreation = () => {
 
   return (
     <div>
+    <div className='contenedor text-white'>
       <span>Crear una nueva Tarjeta</span>
       <form onSubmit={handleSubmit(onSubmit)}>
         <span>Ingresar Ubicación</span>
@@ -90,6 +91,7 @@ const CardCreation = () => {
         Crear Tarjeta
       </button>
       </form>
+    </div>
     </div>
   );
 };

@@ -3,8 +3,12 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import './Login.css'
-
+import { FaBeer } from 'react-icons/fa';
+import { RiUser3Line, RiHandbagLine} from "react-icons/ri";
 const Login = () => {
+
+  
+
 
   const { setCurrentUser } = useContext(UserContext)
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,24 +23,29 @@ const Login = () => {
   return (
     <div className='sign-in-container'>
       <div className='loginFo'>
-      <h3>Login</h3>
-      <span>Ingresa con tu usuario y contraseña</span>
+      <h3 className='login'>Login</h3>
+      <span className='tn'>Ingresa con tu usuario y contraseña</span>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>
+        <br/>
+        
+        <h6><RiUser3Line /> Usuario</h6>
+        
         <input
-          className='input-form'
+          className='form-control'
           type="text"
           placeholder='Nombre de usuario'
           {...register('username', {
               required : 'Debe ingresar su nombre de usuario'
-            }
-          )
-        }
+            })}        
          />
+        
          <br/>
-         <br/>
+         
+         <h6><RiHandbagLine />  Contraseña </h6>
+         
         {/* <p>{errors.username?.message}</p> */}
         <input
-          className='input-form'
+          className='form-control'
           type='password'
           placeholder='Contraseña'
           {...register(
@@ -49,8 +58,10 @@ const Login = () => {
         />
         {/* <p>{errors.password?.message}</p> */}
         <br/>
-        <br/>
-         <button className='btn-form btm btn-secondary' type='submit'>Iniciar Sesión</button>
+        <div className="d-grid gap-2">
+        <button className='btn-form btn btn-secondary' type='submit'>Iniciar Sesión</button>
+        </div>
+
       </form>
       </div>
     </div>
