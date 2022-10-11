@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { CardsContext } from '../../context/CardsContext';
 import { getCards } from '../../service';
-
+import {RiMapPinLine} from "react-icons/ri";
+import "./CardCreation.css"
 
 const CardCreation = () => {
   const { cards, setCards } = useContext( CardsContext )
@@ -43,12 +44,16 @@ const CardCreation = () => {
   }
 
   return (
-    <div>
-    <div className='contenedor text-white'>
-      <span>Crear una nueva Tarjeta</span>
+    <div className=''>
+    <div className='fo contenedor text-white'>
+    <span>Crear una nueva Tarjeta</span>
+      <h1 className='logoUbicacion'><RiMapPinLine/></h1>            
       <form onSubmit={handleSubmit(onSubmit)}>
         <span>Ingresar Ubicación</span>
-        <select
+        <br/>
+        <div className='mb-3'>
+        <select className="form-select" required aria-label="select example" id="inputContinent"
+        
           {
             ...register('continente',{
             required:'debe ingresar Latitud',})
@@ -56,7 +61,9 @@ const CardCreation = () => {
           <option>America</option>
           <option>Africa</option>
         </select>
-        <select
+        <br/>       
+          
+        <select className="form-select" required aria-label="select example" id="inputCountry"
           {
             ...register('pais',{
             required:'debe ingresar pais',})
@@ -64,7 +71,8 @@ const CardCreation = () => {
           <option>Argentina</option>
           <option>Uruguay</option>
         </select>
-        <select
+        <br />        
+        <select className="form-select" required aria-label="select example" id="inputCity"
           {
             ...register('provincia',{
             required:'debe ingresar provincia',})
@@ -73,23 +81,28 @@ const CardCreation = () => {
           <option>Salta</option>
           <option>Tucuman</option>
         </select>
-        <input
-          placeholder='Ingresar la Latitud'
+        <br />
+        <input className="form-control"   placeholder='Ingresar la Latitud'
           {
             ...register('latitud',{
             required:'debe ingresar Latitud',})
           }
         />
-        <input
+        <br/>
+        <input className="form-control"
           placeholder='Ingresar la Longitud'
           {
             ...register('longitud',{
             required:'debe ingresar Longitud',})
           }
         />
-      <button >
-        Crear Tarjeta
-      </button>
+        <br/>
+        </div>
+          <div className="d-grid gap-2">
+            <button className='btn-form btn btn-secondary'>
+            Crear Tarjeta
+            </button>
+          </div>
       </form>
     </div>
     </div>

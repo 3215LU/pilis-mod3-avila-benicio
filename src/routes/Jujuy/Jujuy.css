@@ -3,3 +3,19 @@
     display: inline;
   }
 
+.conteiner{
+  margin:20%;
+  margin-left: 30%;
+  
+}
+.card {
+  /* background-color: red; */
+  /* color: red; */
+  width: 350px;
+  border-radius: 3px;
+  border: 1px;
+  background: rgb(201, 230, 239);
+  /* height: 150px; */
+  /* display: flex;
+  flex-direction: row; */
+}

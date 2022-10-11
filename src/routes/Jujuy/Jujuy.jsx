@@ -126,7 +126,8 @@ useEffect(()=>{
 
 return (
         <>
-    <div className="card-group">        
+    <div className="card-group ">        
+    
     <div className="card">
             <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">            
@@ -157,17 +158,6 @@ return (
             <p className="card-text"><b>Longitud: </b>{dato2.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato2.temperatura} º C.</p>
             <p className="card-text"><b>Vientos: </b>{dato2.vientos} Km/h</p>    
-            </div>
-        </div>
-        <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
-            <div className="card-body">                
-            <h5><b> {dato3.lugar}</b></h5>
-            <h5>PERICO</h5>
-            <p className="card-text"><b>Latitud: </b>{dato3.latitud} º</p>
-            <p className="card-text"><b>Longitud: </b>{dato3.longitud} º</p>        
-            <p className="card-text"><b>Temperatura: </b>{dato3.temperatura} º C.</p>
-            <p className="card-text"><b>Vientos: </b>{dato3.vientos} Km/h</p>    
             </div>
         </div>
         </div>

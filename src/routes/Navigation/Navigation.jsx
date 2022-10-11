@@ -20,7 +20,7 @@ const Navigation = () => {
 
   return (
     <>
-    <nav className="navbar navbar-expand-lg bg-black">
+    <nav className=" navbar navbar-expand-lg text-white bg-black">
   <div className="container-fluid">
   <a className="navbar-brand text-white logo" href="#"><GiAbstract097/></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

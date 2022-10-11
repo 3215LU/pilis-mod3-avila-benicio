@@ -1,0 +1,14 @@
+.fo{
+    width: 400px;
+    background: #1f2932;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+.logoUbicacion{
+    text-align: center;
+}

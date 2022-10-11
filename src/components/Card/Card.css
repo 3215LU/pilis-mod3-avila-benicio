@@ -1,9 +1,16 @@
+.conteiner{
+    
+    margin-left: 3%;
+    
+}
 .card {
     /* background-color: red; */
     /* color: red; */
-    width: 150px;
-    border-radius: 30px;
+    width: 350px;
+    border-radius: 10px;
     border: solid;
+    
+    background: rgb(201, 230, 239);
     /* height: 150px; */
     /* display: flex;
     flex-direction: row; */

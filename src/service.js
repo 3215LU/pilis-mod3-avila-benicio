@@ -48,17 +48,5 @@ export const getCli = async () => {
 };
 
 
-export const getCl = async () => {
-  try {
-    const dato3 = await fetch(`
-    https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=24.3729897&longitude=65.113355&timezone=America/Argentina/Jujuy    
-    `);
-    return dato3.json();
-  } catch {
-    throw new Error('could not fetch tags');
-  }
-};
-
-
 //-24.18334987471809
 //-65.33129361050375
