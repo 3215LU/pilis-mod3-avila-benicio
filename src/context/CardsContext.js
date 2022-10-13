@@ -7,7 +7,14 @@ export const CardsContext = createContext({
 
 export const CardsProvider = ({ children }) => {
   const [cards, setCards] = useState([]);
-  const value = { cards, setCards };
+
+  const eliminarCard=(id)=>{
+    const listaFiltrada =cards.filter((card)=> card.id !== id);
+        setCards(listaFiltrada);
+    };
+
+
+  const value = { cards, setCards, eliminarCard };
 
   return <CardsContext.Provider value={value}>{children}</CardsContext.Provider>;
 }

@@ -1,11 +1,11 @@
 import './Cards.css'
 import Card from "./Card"
 
-const Cards = ({cardsM}) => {
+const Cards = ({cardsM, eliminarCard}) => {
     return(
         <div className="cards">
             {cardsM.map( (card) => (
-                <Card key={card.id} card={card}/>
+                <Card key={card.id} card={card} eliminarCard={eliminarCard}/>
             ))}
         </div>
     );
