@@ -9,9 +9,15 @@
     width: 350px;
     border-radius: 10px;
     border: solid;
-    
     background: rgb(201, 230, 239);
     /* height: 150px; */
     /* display: flex;
     flex-direction: row; */
+}
+.eliminar{
+    background: rgb(201, 230, 239);
+    border: 0ch;
+}
+.eliminar:hover{
+color: blueviolet;
 }

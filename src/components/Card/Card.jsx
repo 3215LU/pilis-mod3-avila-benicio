@@ -1,11 +1,12 @@
 import './Card.css'
 import { FiTrash2 } from "react-icons/fi";
 
+
 const Card = ({card, eliminarCard}) => {
     return(    
         <div className='conteiner'>                    
         <div className="tarjeta card">
-        <img src="..." className="card-img-top" alt="..."/>
+        <img src="" className="card-img-top" alt="..."/>
         <div className="card-body">
             
             <h5 className="card-title">PRONVICIA: {card.provincia}</h5>            
@@ -16,7 +17,7 @@ const Card = ({card, eliminarCard}) => {
             <p className="card-text">Temperatura : {card.temperatura}</p>
             <p className="card-text">Velocidad Viento : {card.velocidadViento}</p>            
             <button        
-            className='text-end'
+            className='text-end eliminar'
             onClick={
                 ()=>{
                     eliminarCard(card.id)
