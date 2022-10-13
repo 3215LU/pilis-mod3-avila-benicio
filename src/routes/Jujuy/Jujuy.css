@@ -2,13 +2,14 @@
     /* text-align: center; */
     display: inline;
   }
-
 .conteiner{
   margin:20%;
-  margin-left: 30%;
-  
+  margin-left: 30%;  
 }
-.card {
+.gru{
+margin: 10%;
+}
+.tbody {
   /* background-color: red; */
   /* color: red; */
   width: 350px;
@@ -18,4 +19,36 @@
   /* height: 150px; */
   /* display: flex;
   flex-direction: row; */
+}
+
+.t{  
+  margin-left: 3%;
+}
+
+img{
+  width: 100px;
+  height: 300px;
+}
+
+.fondot1,.fondot2,.fondot3{
+width: 30%; 
+height: 400px;
+border-radius: 3%;
+margin: 1%;
+text-align: center;
+padding: 2%;
+}
+.fondot1{
+  background-image: url("https://scontent.fjuj3-1.fna.fbcdn.net/v/t39.30808-6/272885622_254198233524919_5730196323076847078_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=EKT3qGSd7iYAX_d8pT4&_nc_ht=scontent.fjuj3-1.fna&oh=00_AT-1KltzeuvR53f6BQW9ZCRCBo_jpQ73inwzf1erP64dMw&oe=634CC879");
+  background-size: cover;
+ color: aliceblue;
+}
+
+.fondot2{
+  background-image: url("https://scontent.fjuj3-1.fna.fbcdn.net/v/t1.6435-9/47395160_10156335966849102_3013674866797707264_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9267fe&_nc_ohc=Zrvb5WctJ7IAX9-l3JI&_nc_ht=scontent.fjuj3-1.fna&oh=00_AT8r_aH450YHipcV0VeAr_jqcI7dMlKLqFxkAYJOhKPXLw&oe=636D4510");
+  background-size: cover;
+}
+.fondot3{
+  background-image: url("https://www.wamanadventures.com/blog/wp-content/uploads/2020/06/salis1.gif");
+  background-size: cover;
 }

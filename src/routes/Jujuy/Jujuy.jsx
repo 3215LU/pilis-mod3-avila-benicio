@@ -126,39 +126,36 @@ useEffect(()=>{
 
 return (
         <>
-    <div className="card-group ">        
+        <div>
+        <h5 className='text-center '><b> {dato2.lugar}</b></h5>
+    <div className="t card-group ">        
     
-    <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
-            <div className="card-body">            
-            <h5><b>{data.lugar}</b></h5>            
+    <br/>
+    <br/>
+    <div className="fondot1">
             <h5>SAN SALVADOR DE JUJUY</h5>            
             <p className="card-text"><b>Latitud: </b>{data.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{data.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{data.temperatura} º C.</p>
             <p className="card-text"><b>Vientos: </b>{data.vientos} Km/h</p>    
-            </div>
+            
         </div>
-        <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
-            <div className="card-body">            
+        <div className="fondot2">          
             <h5>RINCONADA</h5>            
             <p className="card-text"><b>Latitud: </b>{dato1.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{dato1.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato1.temperatura} º C.</p>
             <p className="card-text"><b>Vientos: </b>{dato1.vientos} Km/h</p>    
-            </div>
+            
         </div>
-        <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
-            <div className="card-body">                            
-            <h5><b> {dato2.lugar}</b></h5>
+        <div className=" fondot3">
             <h5>SUSQUES</h5>
             <p className="card-text"><b>Latitud: </b>{dato2.latitud} º</p>
             <p className="card-text"><b>Longitud: </b>{dato2.longitud} º</p>        
             <p className="card-text"><b>Temperatura: </b>{dato2.temperatura} º C.</p>
             <p className="card-text"><b>Vientos: </b>{dato2.vientos} Km/h</p>    
-            </div>
+            
+        </div>
         </div>
         </div>
         </>

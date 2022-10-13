@@ -9,7 +9,7 @@
     width: 350px;
     border-radius: 10px;
     border: solid;
-    background: rgb(201, 230, 239);
+    background: rgb(132, 173, 185);
     /* height: 150px; */
     /* display: flex;
     flex-direction: row; */
@@ -20,4 +20,35 @@
 }
 .eliminar:hover{
 color: blueviolet;
+}
+#provincia{
+    size: 1vw;
+}
+
+#continente{
+    size: 1vw;
+}
+
+#pais{
+    size: 1vw;
+}
+
+#cordenada{
+    
+    size: 1vw;
+}
+
+#longitud{
+    size: 1vw;
+}
+
+#temperatura{
+    text-align: center;
+    font-size: 4vw;
+    font-size: 8vh;
+    color: brown;
+}
+
+#viento{
+    size: 1vw;
 }

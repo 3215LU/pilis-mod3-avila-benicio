@@ -15,15 +15,13 @@ const CardCreation = () => {
     handleSubmit,
     formState: { errors } ,
   } = useForm();
-
   const onSubmit = (data) => {
-
     console.log(data)
-
     getCards(data.latitud,data.longitud,data.continente,data.pais,data.provincia)
     .then( (data1) => {
       const newCard = {
         id : cards.length + 1,
+        
         continente : data.continente,
         pais : data.pais,
         provincia : data.provincia,
@@ -37,9 +35,9 @@ const CardCreation = () => {
       setCards([...cards,newCard])
       console.log('two',cards)
       navigate('/')
-    }
 
-    )
+      
+    } )
     .catch((err) => console.log(err));
   }
 
@@ -133,9 +131,7 @@ const CardCreation = () => {
           <option>	Surinam	</option>
           <option>	Trinidad and Tobago	</option>
           <option>	Uruguay	</option>
-          <option>	Venezuela	</option>
-
-                
+          <option>	Venezuela	</option>               
 
             </optgroup>
             <optgroup label="Europe">

@@ -3,14 +3,9 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import './Login.css'
-import { FaBeer } from 'react-icons/fa';
 import { RiUser3Line, RiHandbagLine} from "react-icons/ri";
 
 const Login = () => {
-
-  
-
-
   const { setCurrentUser } = useContext(UserContext)
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate()
@@ -20,15 +15,13 @@ const Login = () => {
     setCurrentUser(data)
     navigate('/')
   }
-
   return (
     <div className='sign-in-container'>
       <div className='loginFo'>
       <h3 className='login'>Login</h3>
       <span className='tn'>Ingresa con tu usuario y contraseña</span>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>
-        <br/>
-        
+        <br/>        
         <h6><RiUser3Line /> Usuario</h6>
         
         <input
