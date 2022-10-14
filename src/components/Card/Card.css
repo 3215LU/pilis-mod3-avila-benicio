@@ -17,9 +17,14 @@
     /*background: linear-gradient(135deg,#0F4C75,#505488,#5A4894,#A950A1,#FF7CAE,#4DBA9B );*/
     width: 350px;
     border-radius: 10px;     
+    background: #1f2932;
+    color: rgb(255, 255, 255);
+    
   }
 .eliminar{    
-    background-color: rgb(255, 255, 255);
+    background-color: #1f2932;
+    color: rgb(255, 255, 255);
+ /*   background-color: rgb(255, 255, 255);*/
     border: 0ch;    
   opacity: 1;
 }
