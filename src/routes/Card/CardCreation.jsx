@@ -186,7 +186,7 @@ const CardCreation = () => {
             </optgroup>
             <optgroup label="Oceanic">
               <option>Canberra</option>
-              <option>Wellington</option>
+              <option>New ealand</option>
             </optgroup>
           
           

@@ -6,6 +6,7 @@
   margin:20%;
   margin-left: 30%;  
 }
+
 .gru{
 margin: 10%;
 }
@@ -21,7 +22,7 @@ margin: 10%;
   flex-direction: row; */
 }
 .temperatura{
-  color:aliceblue;
+  color: white;
 }
 .t{  
   margin-left: 3%;
@@ -40,13 +41,35 @@ margin: 1%;
 text-align: center;
 padding: 2%;
 }
+
+/* El fondo animado*/
 .fondot1{
-  background-image: url("https://scontent.fjuj3-1.fna.fbcdn.net/v/t39.30808-6/272885622_254198233524919_5730196323076847078_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=EKT3qGSd7iYAX_d8pT4&_nc_ht=scontent.fjuj3-1.fna&oh=00_AT-1KltzeuvR53f6BQW9ZCRCBo_jpQ73inwzf1erP64dMw&oe=634CC879");
-  background-size: cover;
+  /*background: linear-gradient(135deg,#0F4C75,#505488,#5A4894,#A950A1,#FF7CAE,#4DBA9B );*/
+  width: 350px;
+  border-radius: 10px;  
+  background: linear-gradient(to radio,#18978F,#3BACB6,#45b882,#5ace98,#45b681,#3BACB6,#18978F);
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+}
+@keyframes fanimado{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0% 50%;
+  }
+}
+.fondot1{
+ background-image: url("https://scontent.fjuj3-1.fna.fbcdn.net/v/t39.30808-6/272885622_254198233524919_5730196323076847078_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=EKT3qGSd7iYAX_d8pT4&_nc_ht=scontent.fjuj3-1.fna&oh=00_AT-1KltzeuvR53f6BQW9ZCRCBo_jpQ73inwzf1erP64dMw&oe=634CC879");
+ background-size: cover;
  color: aliceblue;
  align-content: center;
  margin-left: 30%;
- 
+ position: fixed;
+ z-index: -1; 
 }
 
 .fondot2{
