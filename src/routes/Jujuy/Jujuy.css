@@ -45,9 +45,9 @@ padding: 2%;
 /* El fondo animado*/
 .fondot1{
   /*background: linear-gradient(135deg,#0F4C75,#505488,#5A4894,#A950A1,#FF7CAE,#4DBA9B );*/
-  width: 350px;
+  width: 370px;
   border-radius: 10px;  
-  background: linear-gradient(to radio,#18978F,#3BACB6,#45b882,#5ace98,#45b681,#3BACB6,#18978F);
+  background: linear-gradient(to radio,#18978F,#3BACB6,#45b681,#3BACB6,#18978F);
   background-size: 500%;
   animation: fanimado 10s infinite;
 }
