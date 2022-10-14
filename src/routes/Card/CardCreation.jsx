@@ -20,8 +20,7 @@ const CardCreation = () => {
     getCards(data.latitud,data.longitud,data.continente,data.pais,data.provincia)
     .then( (data1) => {
       const newCard = {
-        id : cards.length + 1,
-        
+        id : cards.length + 1,        
         continente : data.continente,
         pais : data.pais,
         provincia : data.provincia,

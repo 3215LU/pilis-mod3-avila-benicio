@@ -1,7 +1,5 @@
-.conteiner{
-    
+.conteiner{    
     margin-left: 3%;
-    
 }
 .card {
     /* background-color: red; */
@@ -15,7 +13,7 @@
     flex-direction: row; */
 }
 .eliminar{
-    background: rgb(201, 230, 239);
+    background: rgb(132, 173, 185);
     border: 0ch;
 }
 .eliminar:hover{
@@ -46,9 +44,10 @@ color: blueviolet;
     text-align: center;
     font-size: 4vw;
     font-size: 8vh;
-    color: brown;
+    color: rgb(20, 59, 143);
 }
 
 #viento{
-    size: 1vw;
+    size: 3vw;
+    
 }

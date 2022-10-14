@@ -11,6 +11,8 @@ export const getCards = async (latitud,longitud,continente,pais,provincia) => {
     throw new Error('could not fetch color palettes');
   }
 };
+
+
 const getClima = async () => {
   try {
     const data = await fetch(`
@@ -22,30 +24,3 @@ const getClima = async () => {
   }
 };
 export default getClima;
-
-export const getClim = async () => {
-  try {
-    const dato1 = await fetch(`
-    https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=22.3464624&longitude=66.0210981&timezone=America/Argentina/Jujuy    
-    `);
-    return dato1.json();
-  } catch {
-    throw new Error('could not fetch tags');
-  }
-};
-
-
-export const getCli = async () => {
-  try {
-    const dato2 = await fetch(`
-    https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=latitud:23.3996312&longitude=66.3736199&timezone=America/Argentina/Jujuy    
-    `);
-    return dato2.json();
-  } catch {
-    throw new Error('could not fetch tags');
-  }
-};
-
-
-//-24.18334987471809
-//-65.33129361050375

@@ -4,6 +4,11 @@ import { Link, Outlet } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import {GiAbstract097} from "react-icons/gi";
+import {VscSymbolEnum} from "react-icons/vsc";
+import {VscSymbolConstant} from "react-icons/vsc";
+import {AiOutlineLogin} from "react-icons/ai";
+import {BiLogOutCircle} from "react-icons/bi";
+
 
 const Navigation = () => {  
   const { currentUser, setCurrentUser } = useContext(UserContext);
@@ -27,32 +32,33 @@ const Navigation = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
 
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <div className="navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         
       <li className="nav-item">                  
           {currentUser ? (
             <span className='nav-link' onClick={handleSignOut}>
-              Cerrar Sesión
+              <BiLogOutCircle/> Cerrar Sesión
             </span>
           ) : (
             <Link className='nav-link sign-in' to='/login'>
-              Iniciar Sesión
+               <AiOutlineLogin/> Iniciar Sesión
             </Link>
           )}
         </li>
         <li className="nav-item">
         { currentUser ? (
             <Link className='nav-link' to='/card/create'>
-              Nueva Tarjeta
+               Nueva Tarjeta <b><VscSymbolConstant/></b>
             </Link>
+            
             ):(
-              <span className='nav-link'>Nueva Tarjeta</span>
+              <span className='nav-link'>Nueva Tarjeta  <b><VscSymbolConstant/></b></span>
             )}          
         </li>
         <li className="nav-item" >
             <Link className='nav-link' to='/jujuy'>
-                  Clima Jujuy
+               Clima Jujuy <b><VscSymbolEnum/></b>
             </Link>                    
         </li>
       </ul>

@@ -3,7 +3,11 @@ import React, { useEffect, useState } from "react";
 import getClima from "../../service";
 import getClim from "../../service";
 import getCli from "../../service";
-import getCl from "../../service";
+import { FiTrash2 } from "react-icons/fi";
+import {RiWindyLine} from "react-icons/ri";
+import {RiTempHotLine} from "react-icons/ri";
+import {RiMapPinLine} from "react-icons/ri";
+
 
 const Jujuy = () => {
     const [data, setData]= useState({                
@@ -17,8 +21,7 @@ const Jujuy = () => {
     useEffect(()=>{
         getClima().then(data =>{
             console.log(data)
-            setData( prevState => ({
-                    
+            setData( prevState => ({                    
             lugar: data.timezone,  
             latitud: data.latitude,
             longitud: data.longitude,
@@ -28,31 +31,6 @@ const Jujuy = () => {
         })
     },[])
 /* */    
-
-const [dato, setDato]= useState({                
-    lugar: '',  
-    latitud: '',
-    longitud: '',
-    temperatura: '',
-    vientos:'',
-})
-
-useEffect(()=>{
-    getClima().then(dato =>{
-        console.log(dato)
-        setDato( prevState => ({
-                
-        lugar: dato.timezone,  
-        latitud: dato.latitude,
-        longitud: dato.longitude,
-        temperatura: dato.current_weather.temperature,
-        vientos: dato.current_weather.windspeed,
-        }))
-    })
-},[])
-/** */
-/* */    
-
 const [dato1, setDato1]= useState({                
     lugar: '',  
     latitud: '',
@@ -99,65 +77,23 @@ useEffect(()=>{
     })
 },[])
 
-/** */
-/* */    
-
-const [dato3, setDato3]= useState({                
-    lugar: '',  
-    latitud: '',
-    longitud: '',
-    temperatura: '',
-    vientos:'',
-})
-
-useEffect(()=>{
-    getCl().then(dato3 =>{
-        console.log(dato3)
-        setDato3( prevState => ({
-                
-        lugar: dato3.timezone,  
-        latitud: dato3.latitude,
-        longitud: dato3.longitude,
-        temperatura: dato3.current_weather.temperature,
-        vientos: dato3.current_weather.windspeed,
-        }))
-    })
-},[])
-
 return (
         <>
-        <div>
-        <h5 className='text-center '><b> {dato2.lugar}</b></h5>
-    <div className="t card-group ">        
-    
-    <br/>
-    <br/>
-    <div className="fondot1">
-            <h5>SAN SALVADOR DE JUJUY</h5>            
-            <p className="card-text"><b>Latitud: </b>{data.latitud} º</p>
-            <p className="card-text"><b>Longitud: </b>{data.longitud} º</p>        
-            <p className="card-text"><b>Temperatura: </b>{data.temperatura} º C.</p>
-            <p className="card-text"><b>Vientos: </b>{data.vientos} Km/h</p>    
-            
-        </div>
-        <div className="fondot2">          
-            <h5>RINCONADA</h5>            
-            <p className="card-text"><b>Latitud: </b>{dato1.latitud} º</p>
-            <p className="card-text"><b>Longitud: </b>{dato1.longitud} º</p>        
-            <p className="card-text"><b>Temperatura: </b>{dato1.temperatura} º C.</p>
-            <p className="card-text"><b>Vientos: </b>{dato1.vientos} Km/h</p>    
-            
-        </div>
-        <div className=" fondot3">
-            <h5>SUSQUES</h5>
-            <p className="card-text"><b>Latitud: </b>{dato2.latitud} º</p>
-            <p className="card-text"><b>Longitud: </b>{dato2.longitud} º</p>        
-            <p className="card-text"><b>Temperatura: </b>{dato2.temperatura} º C.</p>
-            <p className="card-text"><b>Vientos: </b>{dato2.vientos} Km/h</p>    
-            
-        </div>
-        </div>
-        </div>
+        
+
+        <div className="fondot1 tarjeta card">
+        <div className="card-body">        
+            <h1 className='text-center'><RiMapPinLine/></h1>
+            <h2 id="provincia"className="card-title text-center"> {data.provincia}</h2>                        
+            <br/>
+            <p id="viento" className="card-text text-end"> <b><RiWindyLine/> Vientos : {data.velocidadViento} km/h</b></p>            
+            <h2 id="temperatura" className="card-text"> <RiTempHotLine/> <b>{data.temperatura}</b> ºC.</h2>
+            <p id="cordenada" className="card-text text-center">Latitud : <b>{data.latitud}º </b>- Longitud :<b> {data.longitud}º</b></p>                        
+            <p className="card-text text-end">Continente : {data.continente}
+            <br/>País : {data.pais}
+            </p>
+        </div>            </div>
+
         </>
       )
 }
