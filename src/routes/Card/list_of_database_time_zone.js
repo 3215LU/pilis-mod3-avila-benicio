@@ -1,6 +1,7 @@
 
 
 export const CONTINENTE = ["America", "Africa", "Asia", "Atlantic", "Europe"]
+// export const CONTINENTE = [{id:0 , continente:"America"}, {id:1 , continente:"Africa"}, {id:2 , continente:"Asia"}, {id:3 , continente:"Atlantic"}, {id:4 , continente:"Europe"}]
 
 const AMERICA = ["Anguilla","Antigua","Araguaina","Argentina","Aruba","Asuncion","Atikokan","Bogota","Cancun","Caracas",
 "Chicago","Fortaleza","Guadeloupe","Guayaquil","La_Paz","Lima","Managua","Merida","Mexico_City","Monterrey","Montevideo","New_York","Phoenix","Santiago","Tijuana","Toronto","Vancouver","Virgin","Whitehorse"]

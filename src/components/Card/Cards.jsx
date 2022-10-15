@@ -12,3 +12,5 @@ const Cards = ({cardsM, eliminarCard}) => {
 }
 
 export default Cards
+
+// Math.floor(Math.random()*394)+79

@@ -7,11 +7,16 @@ import {RiMapPinLine} from "react-icons/ri";
 import "./CardCreation.css"
 import { CONTINENTE, PAIS_O_CIUDAD, PROVINCIAS } from './list_of_database_time_zone';
 
+
 const CardCreation = () => {
   const { cards, setCards } = useContext( CardsContext )
   const [ region, setRegion ] = useState(0)
   const [ provincia, setProvincia] = useState(0)
   const navigate = useNavigate()
+
+  const handleCargarContinente = (e) => {setRegion(CONTINENTE.indexOf(e.target.value)) ;if(e.target.value !== "America") setProvincia(0)};
+
+  const handleCargarPaisArgentina = (e) => {if(e.target.value === "Argentina") {setProvincia(1)} else {setProvincia(0)} }
 
   const {
     register,
@@ -43,33 +48,34 @@ const CardCreation = () => {
     <div className=''>
     <div className='fo contenedor text-white'>
     <span>Crear una nueva Tarjeta</span>
-      <h1 className='logoUbicacion'><RiMapPinLine/></h1>            
+      <h1 className='logoUbicacion'><RiMapPinLine/></h1>  
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <span>Ingresar Ubicación</span>
         <br/>
         <div className='mb-3'>
 
         {/*  SELECCIONA EL CONTINENTE  */}
-        <select className="form-select" required aria-label="select example" id="inputContinent"
+        <select className="form-select" required aria-label="select example" id="inputContinent" onClick={handleCargarContinente }
         
           {
             ...register('continente',{
             required:'debe ingresar Latitud',})
           }>
 
-          {CONTINENTE.map((continente) => <option onClick={ () => {setRegion(CONTINENTE.indexOf(continente)); if(continente !== "America") setProvincia(0)}}>{continente}</option> )}
+          {CONTINENTE.map((continente,i) => <option key={"continente"+i} onClick={() => console.log("contienentes") } >{continente}</option> ) }
         </select>
         <br/>   
 
         {/*  SELECCIONA EL PAIS O LA CIUDAD  */}
-        <select className="form-select" required aria-label="select example" id="inputCountry"
+        <select className="form-select" required aria-label="select example" id="inputCountry" onClick={handleCargarPaisArgentina}
         
           {
             ...register('pais',{
             required:'debe ingresar pais',})
           }>
             
-          {PAIS_O_CIUDAD[region].map( (pais_o_ciudad) => <option onClick={ () => {if(pais_o_ciudad === "Argentina") {setProvincia(1)} else {setProvincia(0)}}}>{pais_o_ciudad}</option>)} 
+          {PAIS_O_CIUDAD[region].map( (pais_o_ciudad,i) => <option key={"pais_o_ciudad"+i} >{pais_o_ciudad}</option>)} 
           
         </select>
         <br />
@@ -80,7 +86,7 @@ const CardCreation = () => {
             ...register('provincia',{
             required:'debe ingresar provincia',})
           }>
-            {PROVINCIAS[provincia].map( (provincia) => <option>{provincia}</option>)}
+            {PROVINCIAS[provincia].map( (provincia,i) => <option key={"provincia"+i}>{provincia}</option>)}
         </select>
         <br />
 
