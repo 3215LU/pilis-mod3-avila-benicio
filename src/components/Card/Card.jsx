@@ -21,15 +21,15 @@ const Card = ({card, eliminarCard }) => {
             ><FiTrash2/>
             </button>
             <h1 className='text-center'><RiMapPinLine/></h1>
-            <h2 id="provincia"className="card-title text-center"> {card.provincia}</h2>                                    
+            <h2 id="provincia"className="card-title text-center"> {card.pais === 'Argentina' ? card.provincia : card.pais}</h2>                                    
                                               
 
             <br/>
             <p id="viento" className="card-text text-end"> <b><RiWindyLine/> Vientos : {card.velocidadViento} km/h</b></p>            
             <h2 id="temperatura" className="card-text"> <WiThermometer/> <b>{card.temperatura}</b> ºC.</h2>
             <p id="cordenada" className="card-text text-center">Latitud : <b>{card.latitud}º </b>- Longitud :<b> {card.longitud}º</b></p>                        
-            <p className="card-text text-end">Continente : {card.continente}
-            <br/>País : {card.pais}
+            <p className="card-text text-end">Continente : {card.continente}<br/>
+            { card.pais === 'Argentina' ? `Pais : ${card.pais}` : `Ciudad : ${card.pais}` }
             </p>
         </div>    
         </div>

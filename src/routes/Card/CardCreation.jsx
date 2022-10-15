@@ -48,6 +48,8 @@ const CardCreation = () => {
         <span>Ingresar Ubicación</span>
         <br/>
         <div className='mb-3'>
+
+        {/*  SELECCIONA EL CONTINENTE  */}
         <select className="form-select" required aria-label="select example" id="inputContinent"
         
           {
@@ -57,8 +59,9 @@ const CardCreation = () => {
 
           {CONTINENTE.map((continente) => <option onClick={ () => {setRegion(CONTINENTE.indexOf(continente)); if(continente !== "America") setProvincia(0)}}>{continente}</option> )}
         </select>
-        <br/>       
-          
+        <br/>   
+
+        {/*  SELECCIONA EL PAIS O LA CIUDAD  */}
         <select className="form-select" required aria-label="select example" id="inputCountry"
         
           {
@@ -71,6 +74,7 @@ const CardCreation = () => {
         </select>
         <br />
 
+        {/*  SELECCIONA LA PROVINCIA EN CASO DE HABER SELECCIONADO EL PAIS ARGENTINA  */}
         <select className="form-select" required aria-label="select example" id="inputCity"
           {
             ...register('provincia',{
@@ -80,6 +84,7 @@ const CardCreation = () => {
         </select>
         <br />
 
+        {/*  SELECCIONA LA LATITUD  */}
         <input className="form-control"   placeholder='Ingresar la Latitud'
           {
             ...register('latitud',{
@@ -87,7 +92,8 @@ const CardCreation = () => {
           }
         />
         <br/>
-
+        
+        {/*  SELECCIONA LA LONGITUD  */}
         <input className="form-control"
           placeholder='Ingresar la Longitud'
           {
